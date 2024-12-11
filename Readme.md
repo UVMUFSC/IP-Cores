@@ -12,5 +12,5 @@ Confira abaixo alguns módulos já desenvolvidos e disponibilizados no repositó
 
 Nesse repositório encontra-se a lista de todos os módulos de design desenvolvidos até o momento. Para obter mais informações sobre cada um deles, acesse os links:
 
-- **[Half-Adder](link para o repositório Half-Adder)**
-- **[Full-Adder](link para o repositório Full-Adder)**
+- **[Half-Adder](https://github.com/UVM-UFSC/UVM_UFSC/tree/main/full-adder)**
+- **[Full-Adder](https://github.com/UVM-UFSC/UVM_UFSC/tree/main/half-adder)**

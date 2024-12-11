@@ -16,7 +16,37 @@ O Half-Adder é utilizado para somar apenas dois números. Para superar essa lim
 
 ### Código em SystemVerilog
 
-<img src="./imgs/image.png" alt="Criação do Módulo" width="400px">
+```systemverilog
+module full_adder(
+a_i,
+b_i,
+carry_i,
+sum_o,
+carry_o
+);
+
+input a_i, b_i, carry_i;
+output sum_o, carry_o;
+wire w_sum, w_carry1, w_carry2;
+
+half_adder U1(
+.a_i(a_i),
+.b_i(b_i),
+.s_o(w_sum),
+.c_o(w_carry1)
+);
+
+half_adder U2(
+.a_i(w_sum),
+.b_i(carry_i),
+.s_o(sum_o),
+.c_o(w_carry2)
+);
+
+    or U3(carry_o, w_carry1, w_carry2);
+
+endmodule
+```
 
 ## Visualização RTL
 
@@ -28,62 +58,68 @@ O Half-Adder é utilizado para somar apenas dois números. Para superar essa lim
 
 ```systemverilog
 `timescale 10ns/100ps
+
 module full_adder_tb;
-reg a_tb, b_tb, carry_i_tb;
-wire sum_tb, carry_o_tb;
-full_adder U0(
-.a_i(a_tb),
-.b_i(b_tb),
-.carry_i(carry_i_tb),
-.sum_o(sum_tb),
-.carry_o(carry_o_tb)
-);
-initial
-begin
- a_tb = 0;
- b_tb = 0;
-carry_i_tb = 0;
- #5;
-a_tb = 0;
- b_tb = 0;
-carry_i_tb = 0;
- #5;
- a_tb = 0;
- b_tb = 1;
- carry_i_tb = 0;
-#5;
- a_tb = 1;
- b_tb = 0;
-carry_i_tb = 0;
- #5;
- a_tb = 1;
- b_tb = 1;
-carry_i_tb = 0;
- #5;
-a_tb = 0;
- b_tb = 0;
-carry_i_tb = 1;
- #5;
-a_tb = 0;
- b_tb = 0;
-carry_i_tb = 1;
- #5;
- a_tb = 0;
- b_tb = 1;
-carry_i_tb = 1;
- #5;
- a_tb = 1;
- b_tb = 0;
-carry_i_tb = 1;
- #5;
- a_tb = 1;
- b_tb = 1;
-carry_i_tb = 1;
- #5;
- $stop;
-end
-always @(a_tb or b_tb or carry_i_tb) $display("s=%b I c=%b", sum_tb,
-carry_o_tb);
+
+	reg a_tb, b_tb, carry_i_tb;
+	wire sum_tb, carry_o_tb;
+
+	full_adder U0(
+		.a_i(a_tb),
+		.b_i(b_tb),
+		.carry_i(carry_i_tb),
+		.sum_o(sum_tb),
+		.carry_o(carry_o_tb)
+	);
+
+	initial
+	begin
+  	a_tb = 0;
+  	b_tb = 0;
+	carry_i_tb = 0;
+  	#5;
+	a_tb = 0;
+  	b_tb = 0;
+	carry_i_tb = 0;
+  	#5;
+  	a_tb = 0;
+  	b_tb = 1;
+  	carry_i_tb = 0;
+	#5;
+  	a_tb = 1;
+  	b_tb = 0;
+	carry_i_tb = 0;
+  	#5;
+  	a_tb = 1;
+  	b_tb = 1;
+	carry_i_tb = 0;
+  	#5;
+	a_tb = 0;
+  	b_tb = 0;
+	carry_i_tb = 1;
+  	#5;
+	a_tb = 0;
+  	b_tb = 0;
+	carry_i_tb = 1;
+  	#5;
+  	a_tb = 0;
+  	b_tb = 1;
+	carry_i_tb = 1;
+  	#5;
+  	a_tb = 1;
+  	b_tb = 0;
+	carry_i_tb = 1;
+  	#5;
+  	a_tb = 1;
+  	b_tb = 1;
+	carry_i_tb = 1;
+  	#5;
+  	$stop;
+
+	end
+
+	always @(a_tb or b_tb or carry_i_tb) $display("a=%b I b=%b I s=%b I c=%b", a_tb, b_tb, sum_tb, carry_o_tb);
+
 endmodule
 ```
 
@@ -93,7 +129,7 @@ endmodule
 
 ## Display no Terminal do ModelSim
 
-<img src="./imgs/terminal.png" alt="Terminal" width="400px">
+<img src="./imgs/terminal.png" alt="Terminal" width="200px">
 
 ## Considerações
 

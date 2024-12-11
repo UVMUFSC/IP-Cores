@@ -2,10 +2,8 @@
 
 module full_adder_tb;
 
-
 	reg a_tb, b_tb, carry_i_tb;
 	wire sum_tb, carry_o_tb;
-	
 	
 	full_adder U0(
 		.a_i(a_tb),
