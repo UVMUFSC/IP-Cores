@@ -4,3 +4,4 @@ Nesse repositório encontra-se a lista de todos os módulos de design desenvolvi
 
 - **[Half-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/half-adder)**
 - **[Full-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/full-adder)**
+- **[Adder-4Bits](https://github.com/UVM-UFSC/IP-Cores/tree/main/adder-4bits)**
