@@ -1,7 +1,7 @@
 ## IP-Cores
 
-Nesse repositório encontra-se a lista de todos os módulos de design desenvolvidos até o momento. Para obter mais informações sobre cada um deles, acesse os links:
+Um **núcleo IP** (_IP-core_) geralmente é um módulo autônomo que faz parte de um dispositivo ou sistema maior, como um processador ou outro CI complexo. Ele incorpora circuitos eletrônicos cujo uso é licenciado pelo projetista original para outras empresas. O projetista testa o núcleo IP antes de licenciá-lo para terceiros.
 
-- **[Half-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/half-adder)**
-- **[Full-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/full-adder)**
-- **[Adder-4Bits](https://github.com/UVM-UFSC/IP-Cores/tree/main/adder-4bits)**
+A maioria dos núcleos IP é desenvolvida utilizando linguagens de descrição de hardware (_HDLs_), como VHSIC HDL, Verilog ou SystemVerilog. Neste projeto, utilizaremos inicialmente **SystemVerilog** para o desenvolvimento.
+
+Confira abaixo alguns módulos já desenvolvidos e disponibilizados na seguinte pasta de [IP-Cores](https://github.com/UVM-UFSC/IP-Cores).
