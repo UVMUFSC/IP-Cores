@@ -48,3 +48,5 @@ end
 
 endmodule
 ```
+In this testbench a AND module was created, and right below a testbench module for that AND module. In the testbench, we provided some inputs, with some time between them, with the objective of testing if the inputs will provide the desired outputs.
+Also, some system functions were used, like ```$display``` and ```$finish```. The ```$``` symbol represents a system function, and are more functions that can be useful while testbenching, like ```$monitor```, wich works like ```$display``` but it only shows the argument of the function in the console when a variable changes, and ```$time``` wich represents the current time of the simulation in that moment.
