@@ -22,7 +22,7 @@ endmodule
 ## Dataflow level
 
 In dataflow level, arithmetic, comparison and shift operations are allowed.
-It is necessary to use the ```systemverilog assign ``` keyword to assign one of the operations quoted above to a variable.
+It is necessary to use the ```assign ``` keyword to assign one of the operations quoted above to a variable.
 
 ```systemverilog
 module example (o1, o2, o3, o4 i1, i2);
@@ -40,9 +40,9 @@ endmodule
 
 ## Behavioral Level
 
-In behavioral level, the keyowrds ```systemverilog always ``` and ```systemverilog intial ``` are commonly used to describe sequencial modeling.
-When using ```systemverilog always ```, it describes a continuous behaviour for combinational circuits. Its argument is a sensitive list made with signals that when changed, trigger the execution of the block.
-The keyword ```systemverilog intial ``` is used in System Verilog to initialize values at the start of simulation. It runs once at the beginning of simulation to set initial conditions for variables.
+In behavioral level, the keyowrds ```always ``` and ```intial ``` are commonly used to describe sequencial modeling.
+When using ```always ```, it describes a continuous behaviour for combinational circuits. Its argument is a sensitive list made with signals that when changed, trigger the execution of the block.
+The keyword ```intial ``` is used in System Verilog to initialize values at the start of simulation. It runs once at the beginning of simulation to set initial conditions for variables.
 These are called procedural blocks.
 
 ```systemverilog
