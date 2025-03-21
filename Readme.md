@@ -6,4 +6,4 @@ A maioria dos núcleos IP é desenvolvida utilizando linguagens de descrição d
 
 Confira abaixo alguns módulos já desenvolvidos e disponibilizados na seguinte pasta de [IP-Cores](https://github.com/UVM-UFSC/IP-Cores).
 
-Atas das reuniôes do projeto sem encontram em [Ata_Reuniôes](https://github.com/UVM-UFSC/Ata_Reunioes).
+Atas das reuniôes do projeto se encontram em [Ata_Reuniôes](https://github.com/UVM-UFSC/Ata_Reunioes).
