@@ -5,3 +5,5 @@ Um **núcleo IP** (_IP-core_) geralmente é um módulo autônomo que faz parte d
 A maioria dos núcleos IP é desenvolvida utilizando linguagens de descrição de hardware (_HDLs_), como VHSIC HDL, Verilog ou SystemVerilog. Neste projeto, utilizaremos inicialmente **SystemVerilog** para o desenvolvimento.
 
 Confira abaixo alguns módulos já desenvolvidos e disponibilizados na seguinte pasta de [IP-Cores](https://github.com/UVM-UFSC/IP-Cores).
+
+Atas das reuniôes do projeto sem encontram em [Ata_Reuniôes](https://github.com/UVM-UFSC/Ata_Reunioes).
