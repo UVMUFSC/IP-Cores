@@ -1,7 +1,7 @@
 ## IP-Cores
 
-Nesse repositório encontra-se a lista de todos os módulos de design desenvolvidos até o momento. Para obter mais informações sobre cada um deles, acesse os links:
+In this repository, you will find a list of all the design modules developed so far. For more information about each of them, access the links:
 
-- **[Half-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/half-adder)**
-- **[Full-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/full-adder)**
-- **[Adder-4Bits](https://github.com/UVM-UFSC/IP-Cores/tree/main/adder-4bits)**
+- **[Half-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/ip-cores/half-adder)**
+- **[Full-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/ip-cores/full-adder)**
+- **[Adder-4Bits](https://github.com/UVMUFSC/IP-Cores/tree/main/ip-cores/adder-4bits)**

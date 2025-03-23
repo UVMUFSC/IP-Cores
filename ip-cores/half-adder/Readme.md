@@ -1,90 +1,90 @@
 # HALF ADDER
 
-## Introdução
+## Introduction
 
-O Half-Adder é um bloco básico usado para somar dois números como duas entradas e produzir duas saídas. O adder é utilizado para realizar a operação OR de dois números binários de um único bit. Os bits do augendo e do adendo são dois estados de entrada, e "carry" e "sum" são dois estados de saída do half adder.
+The Half-Adder is a basic block used to add two numbers as inputs and produce two outputs. The adder is used to perform the OR operation of two single-bit binary numbers. The augend and addend bits are two input states, and "carry" and "sum" are two output states of the half adder.
 
-## Diagrama de Bloco
+## Block Diagram
 
-<img src="./imgs/diagrama-bloco.png" alt="Diagrama de Bloco" width="400px">
+<img src="./imgs/diagrama-bloco.png" alt="Block Diagram" width="400px">
 
-## Tabela Verdade
+## Truth Table
 
-<img src="./imgs/tabela-vdd.png" alt="Tabela Verdade" width="400px">
+<img src="./imgs/tabela-vdd.png" alt="Truth Table" width="400px">
 
-## Criação do Módulo
+## Module Creation
 
-### Código em SystemVerilog
+### SystemVerilog Code
 
 ```systemverilog
 module half_adder(
-	a,
-	b,
-	c,
-	s
+    a,
+    b,
+    c,
+    s
 );
 
-	input a,b;
-	output c,s;
+    input a,b;
+    output c,s;
 
-	xor(s, a, b);
-	and(c, a, b);
+    xor(s, a, b);
+    and(c, a, b);
 
 endmodule
 ```
 
-## Visualização RTL
+## RTL Visualization
 
-<img src="./imgs/RTL.png" alt="Visualização RTL" width="500px">
+<img src="./imgs/RTL.png" alt="RTL Visualization" width="500px">
 
-## Teste
+## Testing
 
-### Código Testbench em SystemVerilog
+### Testbench Code in SystemVerilog
 
 ```systemverilog
 module half_adder_tb;
 
-	reg a_tb,b_tb;
-	wire c_tb,s_tb;
+    reg a_tb,b_tb;
+    wire c_tb,s_tb;
 
 
 half_adder U0(
-	.a(a_tb),
-	.b(b_tb),
-	.c(c_tb),
-	.s(s_tb)
+    .a(a_tb),
+    .b(b_tb),
+    .c(c_tb),
+    .s(s_tb)
 );
 
 initial
 begin
-	a_tb=0;
-	b_tb=0;
-	#5;
-	a_tb=0;
-	b_tb=1;
-	#5;
-	a_tb=1;
-	b_tb=0;
-	#5;
-	a_tb=1;
-	b_tb=1;
-	#5;
-	$stop;
+    a_tb=0;
+    b_tb=0;
+    #5;
+    a_tb=0;
+    b_tb=1;
+    #5;
+    a_tb=1;
+    b_tb=0;
+    #5;
+    a_tb=1;
+    b_tb=1;
+    #5;
+    $stop;
 end
 
-	always @(a_tb or b_tb) $display("Input -> a=%b I b=%b || Output -> c=%b I s=%b", a_tb, b_tb, c_tb, s_tb);
+    always @(a_tb or b_tb) $display("Input -> a=%b I b=%b || Output -> c=%b I s=%b", a_tb, b_tb, c_tb, s_tb);
 
 endmodule
 ```
 
-## Forma de Onda Resultante
+## Resulting Waveform
 
-<img src="./imgs/onda.png" alt="Forma de onda resultante" width="800px">
+<img src="./imgs/onda.png" alt="Resulting Waveform" width="800px">
 
-## Display no Terminal do ModelSim
+## ModelSim Terminal Display
 
 <img src="./imgs/terminal.png" alt="Terminal" width="200px">
 
-## Considerações
+## Considerations
 
-Nota-se pela simulação que o módulo está em funcionamento, dado que a tabela verdade do Half Adder está de acordo com o resultado obtido nos testes, tanto a forma de onda, quanto o resultado escrito no terminal.
+It can be observed from the simulation that the module is functioning correctly, as the Half Adder's truth table matches the results obtained in the tests, both in the waveform and in the terminal output.

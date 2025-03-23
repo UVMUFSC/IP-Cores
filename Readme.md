@@ -1,9 +1,9 @@
 ## IP-Cores
 
-Um **núcleo IP** (_IP-core_) geralmente é um módulo autônomo que faz parte de um dispositivo ou sistema maior, como um processador ou outro CI complexo. Ele incorpora circuitos eletrônicos cujo uso é licenciado pelo projetista original para outras empresas. O projetista testa o núcleo IP antes de licenciá-lo para terceiros.
+An **IP core** (_IP-core_) is typically a standalone module that is part of a larger device or system, such as a processor or another complex IC. It incorporates electronic circuits whose use is licensed by the original designer to other companies. The designer tests the IP core before licensing it to third parties.
 
-A maioria dos núcleos IP é desenvolvida utilizando linguagens de descrição de hardware (_HDLs_), como VHSIC HDL, Verilog ou SystemVerilog. Neste projeto, utilizaremos inicialmente **SystemVerilog** para o desenvolvimento.
+Most IP cores are developed using hardware description languages (_HDLs_), such as VHSIC HDL, Verilog, or SystemVerilog. In this project, we will initially use **SystemVerilog** for development.
 
-Confira abaixo alguns módulos já desenvolvidos e disponibilizados na seguinte pasta de [IP-Cores](https://github.com/UVM-UFSC/IP-Cores).
+Check below for some modules already developed and available in the following [IP-Cores](https://github.com/UVMUFSC/IP-Cores/tree/main/ip-cores) folder.
 
-Atas das reuniôes do projeto se encontram em [Ata_Reuniôes](https://github.com/UVM-UFSC/Ata_Reunioes).
+Meeting minutes for the project can be found in [Ata_Reuniôes](https://github.com/UVM-UFSC/Ata_Reunioes).
