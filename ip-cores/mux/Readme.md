@@ -22,6 +22,11 @@ input data sources and transmits the selected data to a single output line.
 ### SystemVerilog Code
 
 ```systemverilog
+/*
+Produced by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cezar;
+Date: 23/03/2025;
+Description: Multiplexier 4x1 - RTL code.
+*/
 module mux4x1(
 	x0_i,
 	x1_i,
@@ -59,6 +64,11 @@ endmodule
 ### Testbench Code in SystemVerilog
 
 ```systemverilog
+/*
+Produced by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cezar;
+Date: 23/03/2025;
+Description: Multiplexier 4x1 - Testbench code.
+*/
 module mux4x1_tb;
 
 reg x0_tb, x1_tb, x2_tb, x3_tb;
