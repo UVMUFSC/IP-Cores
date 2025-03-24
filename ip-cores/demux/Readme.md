@@ -23,6 +23,11 @@ De-multiplexer is opposite to the multiplexer
 ### SystemVerilog Code
 
 ```systemverilog
+/*
+Designed by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cesar;	
+Date: 21/03/25;	
+Demultiplexier 1x4 - RTL code.
+*/
 module demux1x4
 (
     x_i,
@@ -39,7 +44,7 @@ module demux1x4
 	
 	always_comb
 	begin
-		y0_o = 1'b0;
+	y0_o = 1'b0;
         y1_o = 1'b0;
         y2_o = 1'b0;
         y3_o = 1'b0;
@@ -67,6 +72,12 @@ endmodule
 ### Testbench Code in SystemVerilog
 
 ```systemverilog
+/*
+Designed by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cesar;	
+Date: 21/03/25;	
+Demultiplexier 1x4 - Testbench code.
+*/
+
 module demux1x4_tb;
 	
 	reg x_tb;
