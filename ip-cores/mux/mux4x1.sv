@@ -1,8 +1,7 @@
 /*
-	
-	Produced by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cezar
-	Date Created: 23/03/2025 
-	Description: Mux 4x1
+Produced by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cezar;
+Date: 23/03/2025;
+Description: Multiplexier 4x1 - RTL code.
 */
 
 
