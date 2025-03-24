@@ -1,4 +1,4 @@
-# FULL ADDER
+# DEMUX
 
 ## Introduction
 
@@ -24,7 +24,7 @@ De-multiplexer is opposite to the multiplexer
 
 ```systemverilog
 /*
-Designed by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cesar;	
+Designed by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cezar;	
 Date: 21/03/25;	
 Demultiplexier 1x4 - RTL code.
 */
@@ -73,7 +73,7 @@ endmodule
 
 ```systemverilog
 /*
-Designed by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cesar;	
+Designed by: Bruno Binelli, Bruno Carboni, Eduardo Zambotto, Julio Cezar;	
 Date: 21/03/25;	
 Demultiplexier 1x4 - Testbench code.
 */

@@ -1,4 +1,4 @@
-# FULL ADDER
+# MUX
 
 ## Introduction
 
