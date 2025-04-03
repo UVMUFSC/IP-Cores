@@ -23,17 +23,17 @@ The ALU produces an output result based on the selected operation and also gener
 
 
 typedef enum logic [3:0] { // Lisiting all opcodes 
-  INC = 4'b0000,  		// Increment A
+    INC = 4'b0000,  		// Increment A
 	DEC = 4'b0001, 			// Decrement A
 	ADD = 4'b0010,			// Add A to B
 	ADD_C = 4'b0011,		// Add B to A with carry
 	SUB_B = 4'b0100,		// Subtraction with borrow
 	SUB = 4'b0101,			// Subtraction
-	SHIFT_R = 4'b0110,	// Right shift
-	SHIFT_L = 4'b0111,	// Left shift
+	SHIFT_R = 4'b0110,	    // Right shift
+	SHIFT_L = 4'b0111,	    // Left shift
 	AND_OP = 4'b1000,		// A AND B
 	NAND = 4'b1001,			// A NAND B
-	OR = 4'b1010,				// A OR B
+	OR = 4'b1010,			// A OR B
 	NOR = 4'b1011,			// A NOR B
 	XOR = 4'b1100,			// A XOR B
 	XNOR = 4'b1101,			// A NOT B
