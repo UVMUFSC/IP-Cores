@@ -23,7 +23,7 @@ The ALU produces an output result based on the selected operation and also gener
 
 
 typedef enum logic [3:0] { // Lisiting all opcodes 
-    INC = 4'b0000,  		// Increment A
+  INC = 4'b0000,  		// Increment A
 	DEC = 4'b0001, 			// Decrement A
 	ADD = 4'b0010,			// Add A to B
 	ADD_C = 4'b0011,		// Add B to A with carry
