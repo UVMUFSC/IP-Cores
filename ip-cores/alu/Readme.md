@@ -23,22 +23,22 @@ The ALU produces an output result based on the selected operation and also gener
 
 
 typedef enum logic [3:0] { // Lisiting all opcodes 
-    INC = 4'b0000,  			// Increment A
-	 DEC = 4'b0001, 			// Decrement A
-	 ADD = 4'b0010,			// Add A to B
-	 ADD_C = 4'b0011,			// Add B to A with carry
-	 SUB_B = 4'b0100,			// Subtraction with borrow
-	 SUB = 4'b0101,			// Subtraction
-	 SHIFT_R = 4'b0110,		// Right shift
-	 SHIFT_L = 4'b0111,		// Left shift
-	 AND_OP = 4'b1000,		// A AND B
-	 NAND = 4'b1001,			// A NAND B
-	 OR = 4'b1010,				// A OR B
-	 NOR = 4'b1011,			// A NOR B
-	 XOR = 4'b1100,			// A XOR B
-	 XNOR = 4'b1101,			// A NOT B
-	 NOT = 4'b1110,			// Transfer A
-	 TRF_A = 4'b1111
+  INC = 4'b0000,  			// Increment A
+	DEC = 4'b0001, 			// Decrement A
+	ADD = 4'b0010,			// Add A to B
+	ADD_C = 4'b0011,			// Add B to A with carry
+	SUB_B = 4'b0100,			// Subtraction with borrow
+	SUB = 4'b0101,			// Subtraction
+	SHIFT_R = 4'b0110,		// Right shift
+	SHIFT_L = 4'b0111,		// Left shift
+	AND_OP = 4'b1000,		// A AND B
+	NAND = 4'b1001,			// A NAND B
+	OR = 4'b1010,				// A OR B
+	NOR = 4'b1011,			// A NOR B
+	XOR = 4'b1100,			// A XOR B
+	XNOR = 4'b1101,			// A NOT B
+	NOT = 4'b1110,			// Transfer A
+	TRF_A = 4'b1111
 } opcode_t;
 
 module alu #(parameter N = 8)( // 8 bit parameter as default
@@ -49,7 +49,7 @@ module alu #(parameter N = 8)( // 8 bit parameter as default
 	carry_o
 );
 
-	input logic	[N-1:0] A_i, B_i;  // Two basic operands
+	input logic [N-1:0] A_i, B_i;  // Two basic operands
 	input opcode_t opcode_i; 		 // Selection of opcode
 	output logic [N-1:0] alu_o;    // Result of the operation
 	output logic carry_o;			 // Carry of the operation
@@ -79,6 +79,7 @@ module alu #(parameter N = 8)( // 8 bit parameter as default
 		endcase
 	end
 endmodule
+
 ```
 
 ## Testing
@@ -117,80 +118,80 @@ module alu_tb;
   initial begin	// Test each opcode
     A_i = 8'b00001111; 
     B_i = 8'b00000000; 
-    opcode_i = INC; 		// Set the opcode to INC (Increment A)
-    #10ns;					// Expected: alu_o = A_i + 1 = 00001111 + 1 = 00010000
+    opcode_i = INC; // Set the opcode to INC (Increment A)
+    #10ns;    // Expected: alu_o = A_i + 1 = 00001111 + 1 = 00010000
 
     A_i = 8'b00001111; 
     B_i = 8'b00000000; 
-    opcode_i = DEC; 		// Set the opcode to DEC (Decrement A)
-    #10ns;					// Expected: alu_o = A_i - 1 = 00001111 - 1 = 00001110
+    opcode_i = DEC; // Set the opcode to DEC (Decrement A)
+    #10ns;    // Expected: alu_o = A_i - 1 = 00001111 - 1 = 00001110
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = ADD; 		// Set the opcode to ADD (Add A to B)
-    #10ns;					// Expected: alu_o = A_i + B_i = 00001111 + 00000001 = 00010000
+    opcode_i = ADD; // Set the opcode to ADD (Add A to B)
+    #10ns;    // Expected: alu_o = A_i + B_i = 00001111 + 00000001 = 00010000
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = ADD_C; 	// Set the opcode to ADD_C (Add B to A with carry)
-    #10ns;					// Expected: alu_o = A_i + B_i + 1 = 00001111 + 00000001 + 1 = 00010001
+    opcode_i = ADD_C; // Set the opcode to ADD_C (Add B to A with carry)
+    #10ns;    // Expected: alu_o = A_i + B_i + 1 = 00001111 + 00000001 + 1 = 00010001
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = SUB_B; 	// Set the opcode to SUB_B (Subtraction with borrow)
-    #10ns;					// Expected: alu_o = A_i - B_i = 00001111 - 00000001 = 00001110
+    opcode_i = SUB_B; // Set the opcode to SUB_B (Subtraction with borrow)
+    #10ns;    // Expected: alu_o = A_i - B_i = 00001111 - 00000001 = 00001110
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = SUB; 		// Set the opcode to SUB (Subtraction)
-    #10ns;					// Expected: alu_o = A_i - B_i - 1 = 00001111 - 00000001 - 1 = 00001101
+    opcode_i = SUB; // Set the opcode to SUB (Subtraction)
+    #10ns;    // Expected: alu_o = A_i - B_i - 1 = 00001111 - 00000001 - 1 = 00001101
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
     opcode_i = SHIFT_R; // Set the opcode to SHIFT_R (Shift right)
-    #10ns;					// Expected: alu_o = A_i >> B_i = 00001111 >> 1 = 00000111
+    #10ns;    // Expected: alu_o = A_i >> B_i = 00001111 >> 1 = 00000111
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
     opcode_i = SHIFT_L; // Set the opcode to SHIFT_L (Shift left)
-    #10ns;					// Expected: alu_o = A_i << B_i = 00001111 << 1 = 00011110
+    #10ns;    // Expected: alu_o = A_i << B_i = 00001111 << 1 = 00011110
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = AND_OP; 	// Set the opcode to AND_OP (A AND B)
-    #10ns;					// Expected: alu_o = A_i & B_i = 00001111 & 00000001 = 00000001
+    opcode_i = AND_OP;  // Set the opcode to AND_OP (A AND B)
+    #10ns;    // Expected: alu_o = A_i & B_i = 00001111 & 00000001 = 00000001
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = NAND; 	// Set the opcode to NAND (A NAND B)
-    #10ns;					// Expected: alu_o = ~(A_i & B_i) = ~(00001111 & 00000001) = 11111110
+    opcode_i = NAND;  // Set the opcode to NAND (A NAND B)
+    #10ns;    // Expected: alu_o = ~(A_i & B_i) = ~(00001111 & 00000001) = 11111110
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = OR; 		// Set the opcode to OR (A OR B)
-    #10ns;					// Expected: alu_o = A_i | B_i = 00001111 | 00000001 = 00001111
+    opcode_i = OR;  // Set the opcode to OR (A OR B)
+    #10ns;    // Expected: alu_o = A_i | B_i = 00001111 | 00000001 = 00001111
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = NOR; 		// Set the opcode to NOR (A NOR B)
-    #10ns;					// Expected: alu_o = ~(A_i | B_i) = ~(00001111 | 00000001) = 11110000
+    opcode_i = NOR; // Set the opcode to NOR (A NOR B)
+    #10ns;    // Expected: alu_o = ~(A_i | B_i) = ~(00001111 | 00000001) = 11110000
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = XOR; 		// Set the opcode to XOR (A XOR B)
-    #10ns;					// Expected: alu_o = A_i ^ B_i = 00001111 ^ 00000001 = 00001110
+    opcode_i = XOR; // Set the opcode to XOR (A XOR B)
+    #10ns;    // Expected: alu_o = A_i ^ B_i = 00001111 ^ 00000001 = 00001110
 
     A_i = 8'b00001111; 
     B_i = 8'b00000001; 
-    opcode_i = XNOR; 	// Set the opcode to XNOR (A XNOR B)
-    #10ns;					// Expected: alu_o = ~(A_i ^ B_i) = ~(00001111 ^ 00000001) = 11110001
+    opcode_i = XNOR;  // Set the opcode to XNOR (A XNOR B)
+    #10ns;    // Expected: alu_o = ~(A_i ^ B_i) = ~(00001111 ^ 00000001) = 11110001
 
     A_i = 8'b00001111; 
     B_i = 8'b00000000; 
-    opcode_i = TRF_A; 	// Set the opcode to TRF_A (Transfer A)
-    #10ns;					// Expected: alu_o = A_i = 00001111
+    opcode_i = TRF_A; // Set the opcode to TRF_A (Transfer A)
+    #10ns;    // Expected: alu_o = A_i = 00001111
 
-    $stop;	// Finish the test
+    $stop;
   end
 
 endmodule
