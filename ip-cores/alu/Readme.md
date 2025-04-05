@@ -201,8 +201,8 @@ endmodule
 
 The following waveform graph and the testbench output prove that our module is correct.
 
-<img src="./imgs/Onda_1.jpg" alt="Resulting Waveform" width="800px">
+<img src="./imgs/onda.jpg" alt="Resulting Waveform" width="800px">
 
 ## ModelSim Terminal Display
 
-<img src="./imgs/Terminal.jpg" alt="Terminal" width="400px">
+<img src="./imgs/terminal.jpg" alt="Terminal" width="400px">
