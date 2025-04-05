@@ -8,7 +8,7 @@ The ALU produces an output result based on the selected operation and also gener
 
 ## Block Diagram
 
-<img src="./imgs/Block.png" alt="Block Diagram" width="400px">
+<img src="./imgs/Block.jpg" alt="Block Diagram" width="400px">
 
 ## Module Creation
 
