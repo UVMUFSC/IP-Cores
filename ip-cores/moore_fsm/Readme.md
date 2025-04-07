@@ -20,12 +20,10 @@ A Moore Finite State Machine (FSM) is a type of sequential circuit used to contr
 */
 
 module moore_fsm(
-	
 	clk_i,
 	rst_i,
 	next_i,
 	out_o
-
 );
 
 input logic clk_i, rst_i, next_i;
@@ -37,12 +35,12 @@ typedef enum logic [2:0] { // Listing all states
         S2_MOORE, 
         S3_MOORE, 
         S4_MOORE 
-    } states_moore;
+} states_moore;
     states_moore state_moore;
 	 
 	 
 always_ff @(posedge clk_i) begin
-        if (rst_i) begin
+	if (rst_i) begin
             out_o <= 1'b0;
             state_moore <= S0_MOORE;
         end else begin
@@ -144,42 +142,42 @@ initial begin: testing_inputs
 	#12.5ns;
 	
 	next_i = 1'b1;  // S0 to S1, q_out = 0
-    #10ns;
+    	#10ns;
 	
-    next_i = 1'b0;  // S1 to S2, q_out = 0
+    	next_i = 1'b0;  // S1 to S2, q_out = 0
 	#10ns;
 	
-    next_i = 1'b1;  // S2 to S3, q_out = 0
-    #10ns;
+    	next_i = 1'b1;  // S2 to S3, q_out = 0
+    	#10ns;
 	
 	next_i = 1'b1;  // S3 to S4, q_out = 1
-    #10ns;
+    	#10ns;
 	
 	next_i = 1'b0;  // S4 to S2, q_out = 0
-    #10ns;
+    	#10ns;
 	
 	next_i = 1'b1;  // S2 to S3, q_out = 0
-    #10ns;
+    	#10ns;
 	
-    next_i = 1'b1;  // S3 to S4, q_out = 1
-    #10ns;
+    	next_i = 1'b1;  // S3 to S4, q_out = 1
+    	#10ns;
 	
-    next_i = 1'b1;  // S4 to S1, q_out = 0
-    #10ns;
+    	next_i = 1'b1;  // S4 to S1, q_out = 0
+    	#10ns;
 	
 	next_i = 1'b1;  // S1 to S1, q_out = 0
-    #10ns;
+    	#10ns;
 	
 	next_i = 1'b0;  // S1 to S2, q_out = 0
-    #10ns;
+    	#10ns;
 	
 	next_i = 1'b0;  // S2 to S0, q_out = 0
-    #10ns;
+    	#10ns;
 	
 	next_i = 1'b0;  // S0 to S0, q_out = 0
-    #10ns;
+    	#10ns;
 
-    $stop;
+    	$stop;
 end: testing_inputs
 
 endmodule
