@@ -1,54 +1,54 @@
 # ADDER 4 BITS
 
-## Introdução
+## Introduction
 
-Para criar um somador com mais de um bit, basta expandirmos nossa lógica, incluindo cada bit em pares usando somadores completos conforme necessário. No caso de um somador de quatro bits, precisaremos de 4 somadores completos.
+To create an adder with more than one bit, we simply expand our logic, including each bit in pairs using full adders as needed. For a four-bit adder, we will need 4 full adders.
 
-## Criação do Módulo
+## Module Creation
 
-### Código em SystemVerilog
+### SystemVerilog Code
 
 ```systemverilog
 module adder_4bits (a_i, b_i, s_o, c_o);
 input  [3:0] a_i, b_i;
 output [3:0] s_o;
-output 		 c_o;
-wire [2:0] w_carry;e
+output       c_o;
+wire [2:0] w_carry;
 half_adder U0(
-	.a_i(a_i[0]),
-	.b_i(b_i[0]),
-	.s_o(s_o[0]),
-	.c_o(w_carry[0])
+    .a_i(a_i[0]),
+    .b_i(b_i[0]),
+    .s_o(s_o[0]),
+    .c_o(w_carry[0])
 );
 full_adder U1 (
-	.a_i(a_i[1]),
-	.b_i(b_i[1]),
-	.c_i(w_carry[0]),
-	.s_o(s_o[1]),
-	.c_o(w_carry[1])
+    .a_i(a_i[1]),
+    .b_i(b_i[1]),
+    .c_i(w_carry[0]),
+    .s_o(s_o[1]),
+    .c_o(w_carry[1])
 );
 full_adder U2 (
-	.a_i(a_i[2]),
-	.b_i(b_i[2]),
-	.c_i(w_carry[1]),
-	.s_o(s_o[2]),
-	.c_o(w_carry[2])
+    .a_i(a_i[2]),
+    .b_i(b_i[2]),
+    .c_i(w_carry[1]),
+    .s_o(s_o[2]),
+    .c_o(w_carry[2])
 );
 full_adder U3 (
-	.a_i(a_i[3]),
-	.b_i(b_i[3]),
-	.c_i(w_carry[2]),
-	.s_o(s_o[3]),
-	.c_o(c_o)
+    .a_i(a_i[3]),
+    .b_i(b_i[3]),
+    .c_i(w_carry[2]),
+    .s_o(s_o[3]),
+    .c_o(c_o)
 );
 endmodule
 ```
 
-## Teste
+## Testing
 
-Nosso testbench insere as entradas possíveis para que possamos verificar se a lógica do módulo está funcionando corretamente.
+Our testbench provides possible inputs to verify if the module's logic is working correctly.
 
-### Código Testbench em SystemVerilog
+### Testbench Code in SystemVerilog
 
 ```systemverilog
 module adder_4bits_tb;
@@ -85,12 +85,12 @@ end
 endmodule
 ```
 
-## Forma de Onda Resultante
+## Resulting Waveform
 
-O seguinte gráfico de ondas e a saída do arquivo de testbench provam que nosso módulo está correto.
+The following waveform graph and the testbench output prove that our module is correct.
 
-<img src="./imgs/onda.png" alt="Forma de onda resultante" width="800px">
+<img src="./imgs/onda.png" alt="Resulting Waveform" width="800px">
 
-## Display no Terminal do ModelSim
+## ModelSim Terminal Display
 
 <img src="./imgs/terminal.png" alt="Terminal" width="200px">

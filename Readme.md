@@ -1,7 +1,7 @@
 ## IP-Cores
 
-Nesse repositório encontra-se a lista de todos os módulos de design desenvolvidos até o momento. Para obter mais informações sobre cada um deles, acesse os links:
+An **IP core** (_IP-core_) is typically a standalone module that is part of a larger device or system, such as a processor or another complex IC. It incorporates electronic circuits whose use is licensed by the original designer to other companies. The designer tests the IP core before licensing it to third parties.
 
-- **[Half-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/half-adder)**
-- **[Full-Adder](https://github.com/UVM-UFSC/IP-Cores/tree/main/full-adder)**
-- **[Adder-4Bits](https://github.com/UVM-UFSC/IP-Cores/tree/main/adder-4bits)**
+Most IP cores are developed using hardware description languages (_HDLs_), such as VHSIC HDL, Verilog, or SystemVerilog. In this project, we will initially use **SystemVerilog** for development.
+
+Check below for some modules already developed and available in the following [IP-Cores](https://github.com/UVMUFSC/IP-Cores/tree/main/ip-cores) folder.
