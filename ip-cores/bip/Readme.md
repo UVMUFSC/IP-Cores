@@ -137,10 +137,10 @@ endmodule:bip_tb
 
 The following waveform graphs show the execution of all 16 clock pulses from the ROM memory:
 
-<img src="./imgs/ONDA_1.JPG" alt="Waveform 1 - Clock pulses 1-4" width="800px">
-<img src="./imgs/ONDA_2.JPG" alt="Waveform 2 - Clock pulses 5-8" width="800px">
-<img src="./imgs/ONDA_3.JPG" alt="Waveform 3 - Clock pulses 9-12" width="800px">
-<img src="./imgs/ONDA_4.JPG" alt="Waveform 4 - Clock pulses 13-16" width="800px">
+<img src="./imgs/Onda_1.JPG" alt="Waveform 1 - Clock pulses 1-4" width="800px">
+<img src="./imgs/Onda_2.JPG" alt="Waveform 2 - Clock pulses 5-8" width="800px">
+<img src="./imgs/Onda_3.JPG" alt="Waveform 3 - Clock pulses 9-12" width="800px">
+<img src="./imgs/Onda_4.JPG" alt="Waveform 4 - Clock pulses 13-16" width="800px">
 
 The waveform graphs above and the testbench output prove that our module is correct.
 
